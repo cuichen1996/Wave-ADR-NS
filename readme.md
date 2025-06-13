@@ -33,11 +33,15 @@ Key features:
 ## Citation
 
 ```bibtex
-@article{cui2024neural,
+@article{cui2025neural,
   title={A neural multigrid solver for helmholtz equations with high wavenumber and heterogeneous media},
   author={Cui, Chen and Jiang, Kai and Shu, Shi},
-  journal={accepted for publication in SIAM Journal on Scientific Computing},
-  year={2025}
+  journal={SIAM Journal on Scientific Computing},
+  volume={47},
+  number={3},
+  pages={C655--C679},
+  year={2025},
+  doi={https://doi.org/10.1137/24M1654397}
 }
 ```
 

@@ -26,3 +26,4 @@
 __pycache__/
 cifar-10-batches-py/
 stl10_binary/
+image/

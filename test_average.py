@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--n", type=int, default=128)
 args = parser.parse_args()
 
-DATASET = "stl10"
+DATASET = "cifar10"
 max_iter  = 50
 restart   = 20
 gamma_val = 0.0
@@ -98,7 +98,7 @@ for b, kappa in test_loader:
             b, kappa, omega, max_level, gamma_val, T, Tx, Ty, LT, lam_max, alphas, restart, max_iter
         )
 
-    print("WaveADR iters =", len(ress)-1, "setup time = %f" % setup_time, "solve time = %f" % gmres_time, "|| WaveRay iters =", len(ress_ray)-1, "ray time = %f" % ray_time)
+    print("WaveADR iters =", len(ress)-1, "setup time = %f" % setup_time, "solve time = %f" % gmres_time, "|| WaveRay iters =", len(ress_ray)-1, "solve time = %f" % ray_time)
     iters.append(len(ress)-1)
     setup_times.append(setup_time)
     solve_times.append(gmres_time)
@@ -123,4 +123,4 @@ for b, kappa in test_loader:
 
 # average
 print("WaveADR iters = ", np.mean(iters), "setup time = %f" % np.mean(setup_times), "solve time = %f" % np.mean(solve_times))
-print("WaveRay iters = ", np.mean(ray_iters), "waveRay time = %f" % np.mean(ray_times))
+print("WaveRay iters = ", np.mean(ray_iters), "solve time = %f" % np.mean(ray_times))
